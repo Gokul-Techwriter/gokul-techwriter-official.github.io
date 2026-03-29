@@ -19,13 +19,15 @@
     display: flex;
   }
 
-  /* LEFT SIDEBAR - Using your image */
+  /* LEFT SIDEBAR - Full height image */
   .sidebar {
     width: 280px;
-    min-height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .sidebar img {
@@ -41,6 +43,7 @@
     padding: 3rem 4rem;
     max-width: 900px;
     width: 100%;
+    min-height: 100vh;
   }
 
   .main-content h1 {
@@ -112,7 +115,8 @@
     .sidebar {
       position: relative;
       width: 100%;
-      min-height: auto;
+      height: 200px;
+      bottom: auto;
     }
     .main-content {
       margin-left: 0;
@@ -126,7 +130,7 @@
 </head>
 <body>
 
-<!-- LEFT SIDEBAR - Your image -->
+<!-- LEFT SIDEBAR - Full height image -->
 <div class="sidebar">
   <img src="images/portfolio-left-side-banner.png" alt="Portfolio Sidebar">
 </div>

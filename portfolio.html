@@ -16,149 +16,94 @@
     font-family: 'Raleway', sans-serif;
     background: #f5f0e8;
     min-height: 100vh;
-    display: flex;
   }
 
-  /* Left Sidebar */
-  .sidebar {
-    width: 280px;
-    background: #2c3e2f;
-    color: #e8e0d5;
-    padding: 2rem;
-    min-height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
   }
 
-  .sidebar h1 {
+  h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    color: #f5f0e8;
-  }
-
-  .sidebar .tagline {
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    color: #b8aa99;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-  }
-
-  .sidebar .divider {
-    width: 40px;
-    height: 2px;
-    background: #6aaba5;
-    margin: 1.5rem 0;
-  }
-
-  .sidebar .back-link {
-    margin-top: auto;
-    font-size: 0.8rem;
-  }
-
-  .sidebar .back-link a {
-    color: #b8aa99;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .sidebar .back-link a:hover {
-    color: #6aaba5;
-  }
-
-  /* Main Content */
-  .main-content {
-    margin-left: 280px;
-    padding: 3rem 4rem;
-    max-width: 900px;
-    width: 100%;
-  }
-
-  .main-content h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
     color: #2c3e2f;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
   }
 
-  .main-content .description {
+  .description {
     color: #6b5e4e;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
     border-left: 3px solid #6aaba5;
     padding-left: 1rem;
   }
 
-  .main-content h2 {
+  h2 {
     font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     color: #4a6b5c;
-    margin: 1.5rem 0 0.75rem 0;
+    margin: 2rem 0 1rem 0;
     text-transform: uppercase;
   }
 
-  .main-content ul {
+  ul {
     list-style: none;
     padding: 0;
   }
 
-  .main-content li {
+  li {
     margin-bottom: 0.5rem;
+    color: #3a3a3a;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.2rem;
   }
 
-  .main-content a {
-    color: #3a7ca5;
+  li::before {
+    content: "•";
+    color: #6aaba5;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .back-link {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd6cc;
+  }
+
+  .back-link a {
+    color: #3a6e69;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.2s;
   }
 
-  .main-content a:hover {
-    color: #1e4a6e;
+  .back-link a:hover {
+    color: #4a8b85;
     text-decoration: underline;
   }
 
   @media (max-width: 768px) {
-    .sidebar {
-      position: relative;
-      width: 100%;
-      min-height: auto;
-      padding: 1.5rem;
-    }
-    .main-content {
-      margin-left: 0;
+    .container {
       padding: 2rem 1.5rem;
     }
-    body {
-      flex-direction: column;
+    h1 {
+      font-size: 2rem;
     }
   }
 </style>
 </head>
 <body>
 
-<div class="sidebar">
-  <h1>PORTFOLIO</h1>
-  <div class="tagline">Technical Writing Portfolio</div>
-  <div class="divider"></div>
-  <div class="tagline" style="font-size: 0.7rem;">Markdown | Docs-as-Code | GitHub</div>
-  <div class="back-link">
-    <a href="/">← Back to Home</a>
-  </div>
-</div>
-
-<div class="main-content">
+<div class="container">
   <h1>Portfolio</h1>
   <div class="description">
     8 documents covering developer and productivity tools — written in Markdown, managed on GitHub.
@@ -166,27 +111,31 @@
 
   <h2>User Guides</h2>
   <ul>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/user-guides/postman-user-guide.md" target="_blank">Postman User Guide</a></li>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/user-guides/vscode-user-guide.md" target="_blank">Visual Studio Code User Guide</a></li>
+    <li>Postman User Guide</li>
+    <li>Visual Studio Code User Guide</li>
   </ul>
 
   <h2>Installation Guides</h2>
   <ul>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/installation-guides/postman-installation-guide.md" target="_blank">Postman Installation Guide</a></li>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/installation-guides/vscode-installation-guide.md" target="_blank">VS Code Installation Guide</a></li>
+    <li>Postman Installation Guide</li>
+    <li>VS Code Installation Guide</li>
   </ul>
 
   <h2>Troubleshooting Guides</h2>
   <ul>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/troubleshooting-guides/whatsapp-troubleshooting-guide.md" target="_blank">WhatsApp Desktop Troubleshooting Guide</a></li>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/troubleshooting-guides/zoom-troubleshooting-guide.md" target="_blank">Zoom Desktop Troubleshooting Guide</a></li>
+    <li>WhatsApp Desktop Troubleshooting Guide</li>
+    <li>Zoom Desktop Troubleshooting Guide</li>
   </ul>
 
   <h2>FAQ</h2>
   <ul>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/faqs/gmail-faq.md" target="_blank">Gmail Web FAQ</a></li>
-    <li><a href="https://github.com/Gokul-Techwriter/technical-writing-portfolio/blob/main/faqs/google-chrome-faq.md" target="_blank">Google Chrome FAQ</a></li>
+    <li>Gmail Web FAQ</li>
+    <li>Google Chrome FAQ</li>
   </ul>
+
+  <div class="back-link">
+    <a href="/">← Back to Home</a>
+  </div>
 </div>
 
 </body>
